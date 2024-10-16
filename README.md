@@ -11,12 +11,12 @@ Once you've done so, you can install this package with `wp package install BeAPI
 
 ## Usage
 
-`wp clean-wpforms-entries --expire={time}`
+`wp clean-wpforms-entries {time}`
 
 Time value must be without spaces.
 
 Exemple :
-`wp clean-wpforms-entries --expire=6months`
+`wp clean-wpforms-entries 6months`
 
 Optional parameters :
 `--dry-run`
