@@ -30,7 +30,7 @@ class Clean_Wpforms_Entries extends \WP_CLI_Command {
 	public function __invoke( $args, $assoc_args ): void {
 		global $wpdb;
 
-		if ( ! is_plugin_active( 'wpforms' ) ) {
+		if ( ! is_plugin_active( 'wpforms/wpforms.php' ) ) {
 		    WP_CLI::line( 'WPForms is not active on this site, exiting...' );
 		exit;
 }
