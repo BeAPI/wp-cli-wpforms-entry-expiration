@@ -30,6 +30,11 @@ class Clean_Wpforms_Entries extends \WP_CLI_Command {
 	public function __invoke( $args, $assoc_args ): void {
 		global $wpdb;
 
+		if ( ! is_plugin_active( 'wpforms/wpforms.php' ) ) {
+		    WP_CLI::line( 'WPForms is not active on this site, exiting...' );
+		exit;
+}
+
 		// Get assoc_args to set entries expire limit and dry run.
 		$dry_run       = isset( $assoc_args['dry-run'] );
 		$expire_period = isset( $args[0] ) ? '-' . $args[0] : '';
